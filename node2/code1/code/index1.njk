@@ -1,0 +1,28 @@
+{#{% extends "base.njk" %}
+
+{#定义方法#}
+{#{%macro haha(name)%}
+  <h1>{{name}}</h1>
+{%endmacro%}#}
+
+{#{%block content%} {{ haha('小强') }} {%endblock%}#}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  {% include "item.njk" %}
+  {% include "item.njk" %}
+  {% include "item.njk" %}
+  {% include "item.njk" %}
+  {% import "item.njk" as create %}
+  {{ create.haha("xxxx")}}
+
+</body>
+</html>
+

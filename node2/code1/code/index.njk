@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  {#变量#}
+  <h1>姓名:{{person.name}}</h1>
+
+  {#if#}
+  {#当条件满足时候会输出h1标签#}
+  {% if person.age > 18 %}
+    <h1>成年人</h1>
+  {%elif person.age < 18%}
+    <h1>未成年人</h1>
+  {% endif %}
+  
+  {# for #}
+
+  <ul>
+    {% for item in news %}
+      <li>{{item}}</li>
+    {%endfor%}
+  </ul>
+
+  
+
+</body>
+</html>
